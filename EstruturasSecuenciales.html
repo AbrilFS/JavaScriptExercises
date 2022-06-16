@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras secuenciales de programación</title>
+    <!--i queremos que el operador + sume los contenidos de los valores numéricos ingresados por teclado,
+         debemos llamar a la función parseInt y pasar como parámetro las variables
+          valor1 y valor2 sucesivamente.-->
+</head>
+<body>
+    <p></p>
+    <script>
+        let precio;
+        let cantidad;
+        precio = prompt("Ingrese el precio del artículo");
+        cantidad = prompt ("Ingrese la cantidad de artículos que desea");
+        let importe; 
+        importe = parseInt (precio) * parseInt (cantidad);
+        document.write("Usted debe abonar la cantidad de ")
+        document.write(importe);
+        document.write("pesos");
+    </script>
+</body>
+</html>

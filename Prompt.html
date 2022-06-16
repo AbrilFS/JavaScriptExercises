@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de datos por teclado</title>
+    <p>Ejercicio: Confeccionar un programa que permita cargar el nombre de un usuario 
+        y su mail por teclado. 
+        Mostrar posteriormente los datos en la página HTML.</p>
+<!-- La sintaxis del método prompt es:
+<variable que recibe el dato>=prompt("mensaje a mostrar en la ventana",<valor 
+inicial a mostrar en la ventana>); -->
+
+</head>
+<body>
+ <script>
+     let usuario;
+     let mail;
+     usuario = prompt ("Favor de ingresar el nombre de usuario");
+     mail = prompt("Favor de ingresar mail");
+     document.write ("Hola ");
+     document.write (usuario);
+     document.write('<br>');
+     document.write ("Este es tu mail: ");
+     document.write (mail);
+ </script>   
+</body>
+</html>

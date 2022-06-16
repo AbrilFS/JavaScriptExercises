@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura condicional compuesta</title>
+    <!-- Estamos en presencia de una ESTRUCTURA CONDICIONAL COMPUESTA
+         ya que tenemos actividades por la rama del verdadero y del falso.-->
+    <!--La estructura condicional compuesta tiene la siguiente codificación:
+
+    if (<condición>) 
+    {
+     <Instruccion(es)>
+    }
+    else
+    {
+    <Instruccion(es)>
+    }-->
+</head>
+<body>
+    <p>
+        Realizar un programa que lea por teclado dos números, <br>
+        si el primero es mayor al segundo informar su suma y diferencia, <br>
+        en caso contrario informar el producto y la división del primero <br>
+        respecto al segundo.
+    </p>
+    <script>
+        let valor1= parseInt(prompt("Introduzca primer número"));
+        let valor2= parseInt(prompt("Introduzca segundo número"));
+        let suma = valor1 + valor2;
+        let diferencia = valor1 - valor2;
+        let producto = valor1 * valor2;
+        if (valor1 > valor2)
+        {
+            document.write("La suma de los números es " + suma + "y la diferencia entre ellos es " + diferencia);
+        }
+        else
+         {
+            document.write("El producto de los números es " + producto);
+        }
+
+    </script>
+</body>
+</html>

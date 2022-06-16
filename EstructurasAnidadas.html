@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras condicionales anidadas</title>
+    <!--Recuerda ejecutar un ejercicio a la vez-->
+</head>
+<body>
+    <script>
+        /*Ejercicio 1
+        Se ingresa por teclado un valor entero, 
+        mostrar una leyenda que indique si el número es positivo, cero o negativo.*/
+    
+        let valor1 = parseInt(prompt("Ingrese un número"));
+        if(valor1==0){
+            document.write("El número es igual a 0");
+        } else if (valor1>0){
+            document.write("El número es positivo");
+        } else {
+            document.write("El número es negativo");
+        }
+
+    /*Ejercicio 2:De un postulante a un empleo que realizó un test de capacitación,
+     se obtuvo la siguiente información: nombre del postulante, 
+     cantidad total de preguntas que se le realizaron y 
+     cantidad de preguntas que contestó correctamente. 
+     Se pide confeccionar un programa que lea los datos del postulante 
+     e informe el nivel del mismo según el porcentaje de respuestas correctas que ha obtenido, 
+     y sabiendo que:
+     Nivel superior: Porcentaje>=90%.
+    Nivel medio: Porcentaje>=75% y <90%.
+    Nivel regular: Porcentaje>=50% y <75%.
+    Fuera de nivel: Porcentaje<50%.
+    */
+
+    let nombre = prompt("Nombre del postulante");
+    let preguntas = parseInt(prompt("Ingrese cantidad de preguntas"));
+    let respuestas = parseInt(prompt("Ingrese respuestas acertadas"));
+    let porcentaje = respuestas/preguntas *100;    
+    if(porcentaje >= 90){
+        document.write("Nivel superior");
+    } else if (porcentaje >=75){
+        document.write("Nivel medio");
+    } else if (porcentaje >=50){
+        document.write("Nivel regular");
+    } else {
+        document.write("ÇFuera de nivel");
+    }
+    </script>
+</body>
+</html>

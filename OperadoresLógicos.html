@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos en las estructuras condicionales.</title>
+</head>
+<body>
+    <p> Ejercicio1: Se ingresan por teclado tres números, 
+        si al menos uno de los valores ingresados es menores a 10, 
+        imprimir en la página la leyenda 
+        'Alguno de los números es menor a diez'.</p>
+
+        <script>
+            let num1 = parseInt(prompt("Ingrese primer número"));
+            let num2 = parseInt(prompt("Ingrese segundo número"));
+            let num3 = parseInt(prompt("Ingrese tercer número"));
+            if(num1<=9 || num2<=9 || num3<=9 ){
+                document.write("Alguno de los números es MENOR a 10");
+            }
+            else{
+                document.write("Alguno de los numeros es MAYOR  a 10");
+            }
+        </script>
+    <p> Escribir un programa que pida ingresar la coordenada de un punto
+        en el plano, es decir dos valores enteros x e y.
+    Posteriormente imprimir en pantalla en qué cuadrante se ubica dicho
+    punto. 
+    (1º Cuadrante si x > 0 Y y > 0 , 
+    2º Cuadrante: x < 0 Y y > 0, etc.)
+    </p>
+        <script>
+            let x= parseInt(prompt("Ingrese coordenada x"));
+            let y= parseInt(prompt("Ingrese coordenada y"));
+
+            if(x >0 && y>0){
+                document.write("");
+
+            }
+        </script>
+</body>
+</html>
