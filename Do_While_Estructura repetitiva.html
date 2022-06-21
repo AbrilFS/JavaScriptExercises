@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura repetitiva (do/while)</title>
+    <!--Esta estructura repetitiva se utiliza cuando conocemos de antemano que por lo menos
+         una vez se ejecutará el bloque repetitivo.-->
+</head>
+<body>
+    <p>
+        En un banco se procesan datos de las cuentas corrientes de sus clientes. 
+        De cada cuenta corriente se conoce: número de cuenta, nombre del cliente y saldo actual. 
+        El ingreso de datos debe finalizar al ingresar un valor negativo en el número de cuenta.
+        Se pide confeccionar un programa que lea los datos de las cuentas corrientes e informe:
+        a) De cada cuenta: número de cuenta, nombre del cliente y estado de la cuenta 
+        según su saldo, sabiendo que:
+            Estado de la cuenta	'Acreedor' si el saldo es >0.
+			'Deudor' si el saldo es <cero.
+			"Nul" si el saldo es =0. 
+        </p>
+
+    <script>
+        let cuenta;
+        let cliente;
+        let saldo = 0;
+        let saldoacre = 0;
+        do {
+            cuenta = parseInt(prompt("Ingrese su no. de cuenta"));
+            if (cuenta >=0){
+                cliente = prompt('Ingrese nombre del cliente');
+                saldo = parseFloat(prompt("Saldo actual"))
+                if (saldo > 0) {
+                    saldoacre = saldoacre + saldo;
+                document.write('Acreedor');
+            } else if (saldo < 0) {
+                    document.write('Deudor');
+                } else {
+                    document.write('Nulo');
+                }
+            }
+    
+        } while (cuenta > 0);
+        document.write('Suma total de saldos acreedores:' + saldoacre);
+    </script>
+    <p>
+        Se realizó un censo provincial y se desea procesar la información obtenida en dicho censo. 
+        De cada una de las personas censadas se tiene la siguiente información: 
+        número de documento, edad y sexo ('femenino' o 'masculino')
+        Se pide confeccionar un programa que lea los datos de cada persona censada 
+        (para finalizar ingresar el valor cero en el número de documento) e informar:
+ 
+            a)	Cantidad total de personas censadas.
+            b)	Cantidad de varones.
+            c)	Cantidad de mujeres.
+            d)	Cantidad de varones cuya edad varía entre 16 y 65 años.
+    </p>
+
+    <script>
+        let numdocumento;
+        let edad;
+        let sexofem = 0
+        let sexmasc = 0
+        let totalcensos = 0
+        do {
+            numdocumento = parseInt(prompt("Ingresar número de documento, para terminar proceso teclear 0"));
+            if (numdocumento>0){
+                edad = parseInt(prompt("Ingresar edad"));
+                sexo = prompt("Indicar género (femenino/masculino)");
+                 if (sexo == "masculino"){
+                    sexmasc = sexmasc+ 1;
+                    }
+                 }
+                 if (sexo == "femenino"){
+                     sexofem = sexofem + 1 ;
+                 }
+                 totalcensos = totalcensos + 1
+        }
+        while (numdocumento != 0)
+        document.write("Cantidad total de personas censadas " + totalcensos + "<br>")
+        document.write("Cantidad de mujeres " + sexofem + "<br>")
+        document.write("Cantidad de hombres " + sexmasc + "<br>")
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras switch</title>
+    <!---La instrucción switch es una alternativa para remplazar en algunas 
+        situaciones los if/else if.
+        - Se puede aplicar en ciertas situaciones donde la condición se verifica si 
+        es igual a cierto valor. 
+        - No podemos preguntar por mayor o menor.-->
+</head>
+<body>
+    <p>
+        Ejercicio: Solicitar el ingreso alguna de estas palabras (casa, mesa, perro, gato)
+        luego mostrar la palabra traducida en inglés. 
+    </p>
+    <script>
+        
+        let pal = prompt("Ingrese alguna de estas 3 palabras : casa, mesa, perro o gato");
+      
+        /* 1.la variable que analizamos debe ir después de la instrucción
+             switch entre paréntesis. 
+           2.Cada valor que se analiza debe ir luego de la palabra  clave 'case' 
+            y seguido a los dos puntos, las instrucciones a ejecutar.
+           3. Es importante disponer la palabra  clave 'break' al finalizar cada caso.
+           4. Los valores tipo string, van entre comillas */
+
+        switch (pal) {  
+
+            case "casa":    
+                document.write ("house");
+                break; 
+                   
+            case "mesa":
+                document.write ("table");
+                break;
+            
+            case "perro":
+                document.write("dog");
+                break;
+            
+            case "gato":
+                document.write("cat");
+                break;
+            
+            default:  
+                document.write("alien")
+            /*'default' se ejecuta en caso que la variable no se verifique
+            en algún case. Es opcional en algunas instrucciones. */     
+        }
+    </script>
+</body>
+</html>

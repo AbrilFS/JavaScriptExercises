@@ -7,12 +7,21 @@
     <title>Operadores lógicos en las estructuras condicionales.</title>
 </head>
 <body>
+    <!--La utilización de operadores lógicos permiten en muchos casos, 
+        plantear algoritmos más cortos y comprensibles.-->
+
     <p> Ejercicio1: Se ingresan por teclado tres números, 
         si al menos uno de los valores ingresados es menores a 10, 
         imprimir en la página la leyenda 
         'Alguno de los números es menor a diez'.</p>
-
+        
         <script>
+ /*El operador &&, traducido se lo lee como "Y". Se emplea cuando en una estructura condicional 
+se disponen dos condiciones. Cuando vinculamos dos o más condiciones con el operador "&&" 
+las dos condiciones deben ser verdaderas para que el resultado de la 
+condición compuesta de Verdadero y continúe por la rama del verdadero 
+de la estructura condicional.*/
+
             let num1 = parseInt(prompt("Ingrese primer número"));
             let num2 = parseInt(prompt("Ingrese segundo número"));
             let num3 = parseInt(prompt("Ingrese tercer número"));
@@ -23,6 +32,8 @@
                 document.write("Alguno de los numeros es MAYOR  a 10");
             }
         </script>
+
+
     <p> Escribir un programa que pida ingresar la coordenada de un punto
         en el plano, es decir dos valores enteros x e y.
     Posteriormente imprimir en pantalla en qué cuadrante se ubica dicho
@@ -30,14 +41,30 @@
     (1º Cuadrante si x > 0 Y y > 0 , 
     2º Cuadrante: x < 0 Y y > 0, etc.)
     </p>
+
         <script>
+
+/* Traducido se lo lee como "O". 
+Si la condición 1 es Verdadera o la condición 2 es Verdadera, 
+luego ejecutar la rama del Verdadero. Cuando vinculamos dos o más 
+condiciones con el operador "O", con que una de las dos condiciones 
+sea Verdadera alcanza para que el resultado
+de la condición compuesta sea Verdadero. */
+
             let x= parseInt(prompt("Ingrese coordenada x"));
             let y= parseInt(prompt("Ingrese coordenada y"));
 
             if(x >0 && y>0){
-                document.write("");
-
-            }
+                document.write("Se encuentra en el primer cuadrante");
+            } else if(x<0 && y>0){
+                document.write("Se encuentra en el segundo cuadrante");
+            } else if(x<0 && y<0){
+                document.write("Se encuentra en el tercer cuadrante");
+            } else if (x>0 && y<0){
+                document.write("Se encuentra en el cuarto cuadrante");
+            } else {
+                document.write("Se encuentra en el eje")
+            }        
         </script>
 </body>
 </html>
